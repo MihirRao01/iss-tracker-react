@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
+// this is an object that setes the width and height of the map element
+const mapContainerStyle = {
+  width: "100%",
+  height: "95vh",
+};
+
+// script to load the map from google api
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        center={{ lat: 0, lng: 0 }}
+        zoom={4}
+      />
+    </LoadScript>
   );
 }
 
