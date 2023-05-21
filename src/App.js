@@ -1,9 +1,9 @@
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
-// this is an object that setes the width and height of the map element
+// this is an object that states the width and height of the map element
 const mapContainerStyle = {
   width: "100%",
-  height: "95vh",
+  height: "90vh",
 };
 
 // script to load the map from google api
