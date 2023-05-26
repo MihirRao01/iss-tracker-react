@@ -7,15 +7,18 @@ const mapContainerStyle = {
 };
 
 // script to load the map from google api
-function App() {
+function App({ value }) {
   return (
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
-      <GoogleMap
-        mapContainerStyle={mapContainerStyle}
-        center={{ lat: 0, lng: 0 }}
-        zoom={4}
-      />
-    </LoadScript>
+    <div>
+      <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
+        <GoogleMap
+          mapContainerStyle={mapContainerStyle}
+          center={{ lat: 0, lng: 0 }}
+          zoom={4}
+        />
+      </LoadScript>
+      <h1>{value}</h1>
+    </div>
   );
 }
 
