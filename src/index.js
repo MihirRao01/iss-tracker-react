@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom/client";
-import ParentComponent from "./parent";
+import Sendinput from "./dataprocess";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <div>
-    <ParentComponent />
+    <Sendinput />
   </div>
 );
