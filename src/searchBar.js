@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import "./searchbar.css";
 
-function Search({ onValueChange }) {
+function Search({ onSearch }) {
+  // initialize the stae of the input in the input form
   const [inputValue, setInputValue] = useState("");
 
+  // set the value of the input field when the user types in it
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
+  // send the input value to getLocaiton to calculate lat and long when the user
+  // clicks on the seach icon
   const handleButtonClick = (e) => {
     e.preventDefault();
-
-    onValueChange(inputValue);
+    onSearch(inputValue);
   };
 
   return (
